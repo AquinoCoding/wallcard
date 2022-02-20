@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='centerElement.css') }}">
+
+<div class="container">
+
+
+<section class="scene">
+  {% for carta in cartas %}
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="/static/staticCards/modes.png" style="height:300px;">
+      </div>
+
+      <div class="flip-card-back">
+        <img src="/static/cards/{{ carta }}" style="height:300px;">
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</section>
+</div>
+{% endblock %}
