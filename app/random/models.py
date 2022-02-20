@@ -28,7 +28,6 @@ class randomAction:
             elif len(cartas) == 3:
                 break
 
-        print(cartas)
         return cartas
 
 
