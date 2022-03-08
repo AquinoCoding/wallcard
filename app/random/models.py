@@ -7,6 +7,7 @@ class randomAction:
 
         cardsIMG = "./app/static/cards"
         imagem = os.listdir(cardsIMG)
+        print(imagem)
         
         carta1 = imagem[random.randint(0,(len(imagem)-1))]
         carta2 = imagem[random.randint(0,(len(imagem)-1))]
