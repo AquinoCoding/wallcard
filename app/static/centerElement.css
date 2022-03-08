@@ -6,3 +6,7 @@
     justify-content: center;
     align-items: center;
     }
+
+.section-card {
+    background-color: rgba(0, 0, 0, 0.507);
+}

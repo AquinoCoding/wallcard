@@ -1,25 +1,32 @@
 {% extends "template.html" %}
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='centerElement.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='card.css') }}">
 
 <div class="container">
 
+  <div class="section-card">
+    <br>
+    <br>
+    <br>
+    <section class="scene">
+      {% for carta in cartas %}
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="/static/staticCards/modes.png" style="height:300px;">
+          </div>
 
-<section class="scene">
-  {% for carta in cartas %}
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="/static/staticCards/modes.png" style="height:300px;">
+          <div class="flip-card-back">
+            <img src="/static/cards/{{ carta }}" style="height:300px;">
+          </div>
+        </div>
       </div>
-
-      <div class="flip-card-back">
-        <img src="/static/cards/{{ carta }}" style="height:300px;">
-      </div>
-    </div>
+      {% endfor %}
+    </section>
+    <br>
+    <br>
+    <br>
   </div>
-  {% endfor %}
-
-</section>
 </div>
+
 {% endblock %}
